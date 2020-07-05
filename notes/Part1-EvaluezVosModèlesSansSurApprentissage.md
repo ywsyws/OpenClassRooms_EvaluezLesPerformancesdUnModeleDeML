@@ -63,7 +63,7 @@ Pour faire ça correctement, il faut séparer les données en trois parties : un
 
 Alternativement, au lieu de créer un jeu d’entraînement et un jeu de validation, on peut séparer les données uniquement en deux parties : un jeu d’entraînement et un jeu de test. On fera ensuite une *validation croisée* sur le jeu d’entraînement. Cela nous permet de choisir un modèle (celui qui a la meilleure performance), que l’on va ensuite entraîner sur la totalité du jeu d’entraînement, puis tester sur le jeu de test. C’est cette performance finale qui est la meilleure approximation de la performance que le modèle pourra atteindre sur de nouvelles données.  
 
-![Train Valid Test]()
+![Train Valid Test](https://github.com/ywsyws/OpenClassRooms_EvaluezLesPerformancesdUnModeleDeML/blob/master/image/trainValidTest.png)
 
 :information_source: On peut appliquer le même raisonnement qui nous a conduit à faire une validation croisée plutôt qu’une simple séparation entraînement / test et répéter cette procédure au sein d’une autre validation croisée. On parle alors de **validation croisées imbriquées** (« *nested cross-validation* » en anglais). Le défaut de ce type d’approche, en pratique, et qu’elle peut sélectionner des modèles différents sur chaque fold…  
 
