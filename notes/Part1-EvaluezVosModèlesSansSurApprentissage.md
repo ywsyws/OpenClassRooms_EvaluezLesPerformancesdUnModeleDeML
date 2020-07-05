@@ -69,6 +69,7 @@ Alternativement, au lieu de créer un jeu d’entraînement et un jeu de validat
 
 
 ### Recherche sur grille (grid search)
+To serach hypyerparameters  
 
 ### Sélectionnez le nombre de voisins dans un kNN sur un jeu de données
 
@@ -77,5 +78,11 @@ Alternativement, au lieu de créer un jeu d’entraînement et un jeu de validat
 ### Sélection de modèle
 
 ### Alternatives à la recherche exhaustive
+Dans certains cas, la théorie de l’information nous permet de **calculer la valeur optimale d’un hyperparamètre** grâce à une formule fermée, c’est-à-dire explicitement. L’idée générale de ces approches est d’estimer la perte d'information subie lorsque l’on utilise un certain modèle pour représenter le processus qui a généré les données ; leur but est de choisir le modèle qui donnera lieu à la plus petite perte d’information possible.
+
+:information_source: Les deux approches les plus fréquemment mentionnées dans ce contexte sont le **[critère d’information de Akaike (ou Akaike Information Criterion, AIC)]**(https://www.wikiwand.com/fr/Crit%C3%A8re_d%27information_d%27Akaike) et le **[critère d’information bayésien (ou Bayesian Information Criterion, BIC)]**(https://www.wikiwand.com/fr/Crit%C3%A8re_d%27information_bay%C3%A9sien). En pratique, on s’en sert principalement pour certaines approches de régression linéaire régularisée.  
 
 ### Résumé
+- Pour sélectionner un modèle, on **compare les performances en validation croisée** sur un jeu d’entraînement.  
+- Pour sélectionner les valeurs des hyperparamètres d’un algorithme donné, on fait une ***grid search***, dans laquelle on essaie de couvrir l’espace des valeurs pertinentes de ces hyperparamètres.  
+- On peut implémenter cela très simplement en Python avec **sklearn.model_selection.GridSearchCV**.
