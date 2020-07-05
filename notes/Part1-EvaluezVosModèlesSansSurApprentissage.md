@@ -80,7 +80,7 @@ To serach hypyerparameters
 ### Alternatives à la recherche exhaustive
 Dans certains cas, la théorie de l’information nous permet de **calculer la valeur optimale d’un hyperparamètre** grâce à une formule fermée, c’est-à-dire explicitement. L’idée générale de ces approches est d’estimer la perte d'information subie lorsque l’on utilise un certain modèle pour représenter le processus qui a généré les données ; leur but est de choisir le modèle qui donnera lieu à la plus petite perte d’information possible.
 
-:information_source: Les deux approches les plus fréquemment mentionnées dans ce contexte sont le **[critère d’information de Akaike (ou Akaike Information Criterion, AIC)]**(https://www.wikiwand.com/fr/Crit%C3%A8re_d%27information_d%27Akaike) et le **[critère d’information bayésien (ou Bayesian Information Criterion, BIC)]**(https://www.wikiwand.com/fr/Crit%C3%A8re_d%27information_bay%C3%A9sien). En pratique, on s’en sert principalement pour certaines approches de régression linéaire régularisée.  
+:information_source: Les deux approches les plus fréquemment mentionnées dans ce contexte sont le [**critère d’information de Akaike (ou Akaike Information Criterion, AIC)**](https://www.wikiwand.com/fr/Crit%C3%A8re_d%27information_d%27Akaike) et le [**critère d’information bayésien (ou Bayesian Information Criterion, BIC)**](https://www.wikiwand.com/fr/Crit%C3%A8re_d%27information_bay%C3%A9sien). En pratique, on s’en sert principalement pour certaines approches de régression linéaire régularisée.  
 
 ### Résumé
 - Pour sélectionner un modèle, on **compare les performances en validation croisée** sur un jeu d’entraînement.  
