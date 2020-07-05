@@ -11,7 +11,7 @@ Un modèle qui **sur-apprend** est un modèle qui est **trop complexe** par rapp
 "**Sous-apprentissage**" - Les modèles **trop simples**
 
 **Compromis biais-variance** 
-![Compromis biais-variance]()
+![Compromis biais-variance](https://github.com/ywsyws/OpenClassRooms_EvaluezLesPerformancesdUnModeleDeML/blob/master/image/compromisBiaisVariance.png)
 
 :information_source: La complexité d’un modèle peut être mesurée de différentes façons. L’une d’entre elles est le nombre de paramètres utilisés par ce modèle : plus il y a de paramètres, plus le modèle est complexe.  
 
