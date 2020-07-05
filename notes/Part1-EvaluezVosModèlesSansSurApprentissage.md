@@ -26,4 +26,47 @@ Trade off between time and accuracy of a model.
 - En apprentissage supervisé, le but est de produire des modèles qui **généralisent**, c’est-à-dire qui sont capables de faire de bonnes prédictions sur de nouvelles données.  
 - De bonnes performances sur le jeu d’entraînement **ne garantissent pas** que le modèle sera capable de généraliser !  
 - On cherche à développer un modèle qui soit suffisamment complexe pour bien capturer la nature des données (et éviter ainsi le **sous-apprentissage**), mais suffisamment simple pour éviter le sur-apprentissage.  
-- Attention aux **contraintes de temps de calcul** et aux **ressources en mémoire** !
+- Attention aux **contraintes de temps de calcul** et aux **ressources en mémoire** !  
+
+
+## 2. Mettez en place un cadre de validation croisée
+### Jeux d’entraînement et de test
+
+### Validation croisée
+:information_source:   
+Dans scikit-learn, la méthode **<ins>model_selection</ins>**.KFold permet de créer les folds d’une validation croisée.  
+
+### Stratification
+:information_source:   
+Dans scikit-learn, la méthode **<ins>model_selection.StratifiedKFold</ins>** permet de créer les folds d’une validation croisée stratifiée.  
+
+:information_source:   
+Au moment de l'*apprentissage* (et non pas de l'évaluation), on peut compenser le déséquilibre entre les classes dans le jeu d'entraînement en utilisant une méthode de ré-échantillonnage : on tire  aléatoirement parmi la classe majoritaire autant d'observations que dans la classe minoritaire, ce qui crée un jeu équilibré, opération que l'on répète de nombreuses fois. On crée ainsi plusieurs modèles, que l'on peut ensuite combiner en moyennant leurs scores ou en choisissant l'étiquette la plus fréquemment prédite.
+
+### Leave-one-out
+(k-1)n/k
+n est la taille du jeu complet
+**Leave-one-out**: on ne laisse de côté qu’un seul exemple pour chaque jeu d’entraînement
+
+Ça a l’air bien ! Sauf que…
+
+- on augmente fortement le temps de calcul. Imaginez ça sur une base de données de 100 000 images ! Il faudrait entraîner 100 000 modèles sur 99 999 images chacun.  
+- on forme ainsi des jeux d’entraînements très similaires entre eux, et des jeux de test très différents les uns des autres. On va avoir quasiment le même modèle sur chaque fold, et la qualité de ses prédictions risque de beaucoup varier. Il sera difficile de tirer des conclusions.
+
+:information_source: 
+En pratique, on choisit le plus souvent k=5 ou k=10.  
+
+## 3. TP – Sélectionnez le nombre de voisins dans un kNN
+### Sélection de modèle
+
+### Recherche sur grille (grid search)
+
+### Sélectionnez le nombre de voisins dans un kNN sur un jeu de données
+
+### Les données
+
+### Sélection de modèle
+
+### Alternatives à la recherche exhaustive
+
+### Résumé
